@@ -1,33 +1,19 @@
-package test.java;
+package lesson6;
 
+import baseobjects.BaseTest;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-public class Lesson6 {
-    WebDriver driver = null;
-
-    @BeforeTest
-    public void preconditions() {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\driver\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        driver.get("https://www.saucedemo.com/");
-    }
+public class Lesson6 extends BaseTest {
 
     @Test
     public void logIn() {
+        driver.get("https://www.saucedemo.com/");
         //WebElements
         WebElement username = driver.findElement(By.xpath("//input[@id='user-name']"));
         WebElement password = driver.findElement(By.xpath("//input[contains(@name,'password')]"));
@@ -67,9 +53,5 @@ public class Lesson6 {
         Assert.assertEquals(expectedResult, actualResult);
     }
 
-    @AfterTest
-    public void postconditions() {
-        driver.close();
-        driver.quit();
-    }
+
 }
