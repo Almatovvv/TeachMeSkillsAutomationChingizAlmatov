@@ -14,12 +14,14 @@ import static baseobjects.DriverManager.getDriver;
 public class BaseTest {
     protected WebDriver driver;
     protected ITestContext context;
+    protected String currentDirectoryPath;
 
     @BeforeTest
     public void precondition(ITestContext context) {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\driver\\chromedriver.exe");
         this.context = context;
         this.driver = getDriver(DriverManager.Drivers.CHROME);
+        currentDirectoryPath = System.getProperty("user.dir");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+p{
+font-family: Brush Script MT;
+font-size: 20pt;
+color: #2a486e;
+}
+
+.c {
+    border: 2px solid #333;
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #c5d0de;
+    background-color: #5a7494;
+  }
+
+.button{
+background-color: #8cabd1;
+font-size: 12pt;
+}
+
+
+
+    </style>
+</head>
+<body>
+<h2>Hello world!</h2>
+
+<h3>Here's a table with different programming languages and the ways to print "Hello world"</h3>
+
+<table>
+    <tr>
+        <th>Language</th>
+        <th>Code</th>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>
+            int main() {
+            printf("Hello World");
+            return 0;
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>C++</td>
+        <td>
+            int main() {
+            std::cout << "Hello World";
+            return 0;
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Java</td>
+        <td>
+            class GFG {
+            public static void main (String[] args) {
+            System.out.println("Hello World");
+            }}
+        </td>
+    </tr>
+    <tr>
+        <td>Python3</td>
+        <td>print("Hello World")</td>
+    </tr>
+</table>
+<a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">
+    <img src="https://oms.systems/images/hello-world.jpg" alt="Hello World"
+         style="margin-top: 40px" width="400" height="200">
+</a>
+<p style="margin-top: 40px; margin-bottom: 3px; "> Little survey to find the best programming language </p>
+
+<h4 style="margin-top: 10px;" type="question">The best programming language:</h4>
+
+<form>
+    <input type="text" id="bpl" name="best_programming_lang"><br>
+</form>
+
+
+<h4 type="question" style="margin-top: 10px;">Find language you wrote before:</h4>
+
+<div>
+    <input type="checkbox" id="java" name="answer_java">
+    <label for="java">Java</label><br>
+    <input type="checkbox" id="oc_java" name="answer_oc_java">
+    <label for="oc_java">Of course, Java.</label><br>
+    <input type="checkbox" id="java_ol" name="answer_java_ol">
+    <label for="java_ol">Java - one love</label><br><br>
+    <button type="button" class="button">Answer</button>
+</div>
+<div id="test_drive">
+    <h3 type="question" style="margin-top: 40px;">What programming language you want to study?</h3>
+    <form>
+        <label for="pl">Programming language:</label>
+        <select name="pl" id="pl">
+            <option value="java">Java</option>
+            <option value="python_java">Python, then switch to Java</option>
+            <option value="oop_java">The best OOP language</option>
+        </select>
+        <br><br>
+        <button type="button" class="button">Off we go!</button>
+    </form>
+</div>
+
+</body>
+</html>
