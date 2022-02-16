@@ -22,7 +22,6 @@ public class Lesson4 {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-//        System.setProperty()
     }
     @AfterTest
     public void afterTest(){
